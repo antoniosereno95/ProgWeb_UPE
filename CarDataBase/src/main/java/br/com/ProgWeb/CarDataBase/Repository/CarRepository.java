@@ -1,11 +1,10 @@
 package br.com.ProgWeb.CarDataBase.Repository;
-
+import java.util.List;
 import org.springframework.data.repository.CrudRepository;
-
+import org.springframework.stereotype.Service;
 import br.com.ProgWeb.CarDataBase.Model.Car;
 
-import java.util.List;
-
+@Service
 public interface CarRepository extends CrudRepository <Car, Long> {
 	
 	List<Car> findByBrand(String brand);

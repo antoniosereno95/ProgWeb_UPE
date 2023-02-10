@@ -1,5 +1,8 @@
 package br.com.ProgWeb.CarDataBase.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -10,19 +13,22 @@ import jakarta.persistence.ManyToOne;
 
 
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInicializer", "handler"})
 //@Table(name="carro")
 public class Car {
 	
 	//Atributos
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@JsonIgnore
 	private long id;
-	
+
 	private String brand, model, color, registerNumber;
 	private int year, price;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "owner")
+	@JsonIgnore
 	private Owner owner;
 	
 	//construtor
