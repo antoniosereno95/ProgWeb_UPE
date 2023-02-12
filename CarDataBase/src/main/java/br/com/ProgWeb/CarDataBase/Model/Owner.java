@@ -15,6 +15,7 @@ import jakarta.persistence.OneToMany;
 
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInicializer", "handler"})
+//pra resolver o problema do carregamento do arquivo JSON, eu tive que colcoar essas anotaçoes de JSONIgnore com a propriedade LazyInicializer, assim como mostrado em sala de aula
 //@Table(name="dono")
 public class Owner {
 	
@@ -26,7 +27,7 @@ public class Owner {
 	private String firstName, lasteName;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
-	@JsonIgnore
+	@JsonIgnore //Aqui tbm, usamos o jsonIgnore para que o Atributo lista de carros seja carregado em formato JSON sem dar o erro de StackOverflow
 	private List<Car> cars;
 	
 	

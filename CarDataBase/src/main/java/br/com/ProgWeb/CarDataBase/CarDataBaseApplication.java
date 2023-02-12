@@ -75,6 +75,16 @@ public class CarDataBaseApplication implements CommandLineRunner {
 		carRepository.save(new Car(
 				"Toyota", "Corolla", "prata", "FTP-2839", 1994, 13000,owner2)
 				);
+		
+		Car carro00 = new Car(
+				"lamburguine", "trrrr7", "vermelho", "AtF-5621", 2017, 42000, antonio);
+		
+		carRepository.save(carro00);
+		
+		Car carro01 = new Car(
+				"Ford", "tiii7", "amarelo", "AtF-5621", 2017, 42000, antonio);
+		
+		carRepository.save(carro01);
 	}
 
 }

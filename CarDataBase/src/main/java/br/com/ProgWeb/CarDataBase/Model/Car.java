@@ -14,7 +14,8 @@ import jakarta.persistence.ManyToOne;
 
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInicializer", "handler"})
-//@Table(name="carro")
+//pra resolver o problema do carregamento do arquivo JSON, eu tive que colcoar essas anotaçoes de JSONIgnore com a propriedade LazyInicializer, assim como mostrado em sala de aula
+//@Table(name="carro") a anotacao ta aqui por motivos didaticos
 public class Car {
 	
 	//Atributos
@@ -28,7 +29,7 @@ public class Car {
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "owner")
-	@JsonIgnore
+	@JsonIgnore //a anotacao JsonIgnore tbm é colocada encima da propriedade Owener por ocnta da anotaçao @ManyToMany que possibilita um Owner ter diversos carros
 	private Owner owner;
 	
 	//construtor
