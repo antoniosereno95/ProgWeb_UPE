@@ -1,9 +1,11 @@
-
+import Images from "./Images";
+import dog from '../assets/dachshund-720p.jpg'
+import morar from '../assets/sunrise-portugal-lisbon.jpg'
 
 const AnotherComponent = () => {
 
-    const handleClick = () => {
-        console.log("Clicou no botao");
+    const handleClickMorar = () => {
+        console.log("hueheu");
     }
 
     return (
@@ -12,14 +14,22 @@ const AnotherComponent = () => {
             <div>
                 <p>Another Componente</p>
                 <button
-                onClick={handleClick}
-                >Evento de Click</button>
+                onClick={handleClickMorar}
+                >Veja onde eu vou MORAR</button>
+                <br/>
+                <img src={morar} alt="portugal ao nascer do sol"></img>
 
                 <hr></hr>
 
                 <button 
                 onClick={() => console.log("teste")}
-                >Evento de Elemento</button>
+                >Veja qual sera meu PET</button>
+                <br/>
+                <img src={dog} alt="dogue"></img>
+                
+                <hr></hr>
+
+                
             </div>
         </fieldset>
         </>
