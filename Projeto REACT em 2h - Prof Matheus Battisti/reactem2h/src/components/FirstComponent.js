@@ -1,14 +1,20 @@
 
 
-function FirstComponent() {
+function FirstComponent() {//algum comentario.
 
     return (
         <>
-        
-        <div>
-            <p>Primeiro Componente</p>
-        </div>
-    
+        <fieldset>
+            <div className="firstcomponent">
+                <p>Primeiro Componente</p>
+                {/* Algum comentario em JSX*/}
+                <label htmlFor="name">Nome:</label>
+                <input type="text" name="name" />
+                <br/><br/>
+                <label htmlFor="sobrenome">Sobrenome:</label>
+                <input type="text" name="sobrenome"/>
+            </div>
+        </fieldset>
         </>
     );
 }

@@ -1,12 +1,14 @@
 import './App.css';
-import './components/FirstComponent';
+import AnotherComponent from './components/AnotherComponent';
 import FirstComponent from './components/FirstComponent';
+
 
 function App() {
   return (
     <div className="App">
       <h2>Hello React Worlds</h2>
       <FirstComponent />
+      <AnotherComponent />
     </div>
   );
 }
