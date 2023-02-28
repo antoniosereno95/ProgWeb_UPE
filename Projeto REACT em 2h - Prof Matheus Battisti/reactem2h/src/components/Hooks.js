@@ -17,7 +17,7 @@ const Hooks = () => {
         <br/>
         <fieldset>
             <div>
-                <p>Idade = {idade}</p>
+                <p><strong>Idade = </strong>{idade}</p>
                 <br/>
                 <button
                 onClick={changeAge}

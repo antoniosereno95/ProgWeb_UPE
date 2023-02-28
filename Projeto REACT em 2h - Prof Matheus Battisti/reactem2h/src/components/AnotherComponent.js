@@ -29,7 +29,7 @@ const AnotherComponent = () => {
         <fieldset>
             <div>
                 <hr></hr>
-                <p>Fotinhas</p>
+                <p><strong>Fotinhas</strong></p>
                 <hr></hr>
                 <button
                 onClick={handleClickMorar}
