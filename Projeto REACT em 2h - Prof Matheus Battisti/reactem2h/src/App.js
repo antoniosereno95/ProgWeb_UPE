@@ -2,6 +2,8 @@ import './App.css';
 import AnotherComponent from './components/AnotherComponent';
 import FirstComponent from './components/FirstComponent';
 import Hooks from './components/Hooks';
+import List from './components/List';
+import RenderCondicional from './components/RenderCondicional';
 
 
 function App() {
@@ -11,6 +13,8 @@ function App() {
       <FirstComponent />
       <AnotherComponent />
       <Hooks />
+      <List />
+      <RenderCondicional />
     </div>
   );
 }
