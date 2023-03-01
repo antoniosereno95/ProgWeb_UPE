@@ -14,7 +14,7 @@ function App() {
       <AnotherComponent />
       <Hooks />
       <List />
-      <RenderCondicional />
+      <RenderCondicional y={7}/>
     </div>
   );
 }

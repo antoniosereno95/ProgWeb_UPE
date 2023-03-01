@@ -13,17 +13,19 @@ const List = () => {
 
     return (
         <>
-        <div>
-            <h4>Listas em React</h4>
-            {itens.map((itens) => (
-            <>
-            <p key={itens.id}>
-                ID: {itens.id} - Nome: {itens.nome}
-            </p>
-            </>
-            ))}
-            <br/>
-        </div>
+        <fieldset>
+            <div>
+                <h4>Listas em React</h4>
+                {itens.map((itens) => (
+                <>
+                <p key={itens.id}>
+                    ID: {itens.id} - Nome: {itens.nome}
+                </p>
+                </>
+                ))}
+                <br/>
+            </div>
+        </fieldset>
         </>
     )
 }
