@@ -8,7 +8,7 @@ export default function App(){
 
     const [title, setTitle] =  useState("");
     const [time, setTime] = useState("");
-    const [todos, setTodos] = useState({}); //aqui inicia ocm uma lista vazia para que eu possa colocar objetos TO-DO´s dentro dessa array.
+    const [listaDeTodos, setListaDeTodos] = useState([]); //aqui inicia ocm uma lista vazia para que eu possa colocar objetos TO-DO´s dentro dessa array.
     const[loading, setLoading] = useState(false);
 
 
@@ -20,10 +20,11 @@ export default function App(){
                     <h1>Projeto TO-DO´s React</h1>
                 </div>
                 <div className='form-todo'>
-                    <p>Fomrulario</p>
+                    <p>Formulario</p>
                 </div>
                 <div className='list-todo'>
-                    <p>lista de TO-DOs</p>
+                    <h2>Lista de Tarefas:</h2>
+                    {listaDeTodos.length === 0 && <p>Não ha tarefas a serem exibidas</p>}
                 </div>
             </div>
         </>
