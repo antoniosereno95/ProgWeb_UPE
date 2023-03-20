@@ -33,7 +33,13 @@ public class CostumerController {
 		Optional<Costumer> encontrado = costumerRepository.findById(atualizarCostumer.getId());
 		
 		if(!encontrado.equals(atualizarCostumer)) {
-			costumerRepository.save(atualizarCostumer);
+			
+			Costumer Update = encontrado.get();
+			Update.setNome(atualizarCostumer.getNome());
+			Update.setEmail(atualizarCostumer.getEmail());
+			Update.setIdade(atualizarCostumer.getIdade());
+			costumerRepository.save(Update);
+			
 			System.out.println("Atualizado");
 			return "Atualizado";
 		}else {
@@ -43,6 +49,22 @@ public class CostumerController {
 	
 	}
 	
+	/*
+	@PutMapping("/tutorials/{id}")
+	  public ResponseEntity<Tutorial> updateTutorial(@PathVariable("id") long id, @RequestBody Tutorial tutorial) {
+	    Optional<Tutorial> tutorialData = tutorialRepository.findById(id);
+
+	    if (tutorialData.isPresent()) {
+	      Tutorial _tutorial = tutorialData.get();
+	      _tutorial.setTitle(tutorial.getTitle());
+	      _tutorial.setDescription(tutorial.getDescription());
+	      _tutorial.setPublished(tutorial.isPublished());
+	      return new ResponseEntity<>(tutorialRepository.save(_tutorial), HttpStatus.OK);
+	    } else {
+	      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+	    }
+	  }
+	*/
 	
 	@PostMapping("/delete/{id}")
 	public String DeleteCostumer(@RequestBody @Valid Costumer deletarCostumer) {
